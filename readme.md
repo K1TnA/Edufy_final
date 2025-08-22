@@ -25,7 +25,21 @@ It is built with the MERN stack (MongoDB, Express, React, Node.js).
 | Tools        | Git, REST APIs                        |
 
 ---
-
+FOLDER STRUCTURE:
+Edufy_final/
+│
+├── frontend/           # React application
+│   ├── public/
+│   ├── src/
+│   └── package.json
+│
+├── backend/            # Express backend (API)
+│   ├── routes/
+│   ├── models/
+│   ├── controllers/
+│   └── package.json
+│
+└── README.md
 ## ⚙️ Getting Started
 
 ### Prerequisites
@@ -42,6 +56,8 @@ cd Edufy_final
 
 # Install backend dependencies
 npm install
+
+
 
 # Go to frontend and install dependencies
 cd frontend
