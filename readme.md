@@ -1,67 +1,190 @@
-# Edufy
+# Edufy - Educational Platform
 
-**Edufy** is a personal project — an educational platform website that supports user authentication, course management, and lecture video hosting.  
-It is built with the MERN stack (MongoDB, Express, React, Node.js).
-
----
+A modern, responsive educational dashboard built with React, Material-UI, and Tailwind CSS. Edufy provides an intuitive interface for managing educational content, analytics, and user interactions.
 
 ## 🚀 Features
 
-- **User Authentication** – Secure login & signup functionality.  
-- **Course Management** – Create, update, and manage courses and lectures.  
-- **Video Hosting** – Upload and stream lecture videos.  
-- **RESTful APIs** – Frontend and backend integration.  
-- **Responsive Design** – Works across devices.  
+- **Modern Dashboard Interface**: Clean and responsive design using Material-UI components
+- **Tailwind CSS Styling**: Utility-first CSS framework for rapid UI development
+- **Interactive Charts**: Data visualization with ApexCharts and Charts.css
+- **PDF Generation**: Built-in PDF rendering capabilities with React-PDF
+- **State Management**: Redux Toolkit for efficient state management
+- **Responsive Design**: Mobile-first approach with responsive breakpoints
+- **Firebase Hosting**: Ready for deployment on Firebase
 
----
+## 🛠️ Tech Stack
 
-## 🛠 Tech Stack
+### Frontend
+- **React 18** - Modern React with hooks and functional components
+- **Vite** - Fast build tool and development server
+- **Material-UI (MUI)** - React component library
+- **Tailwind CSS** - Utility-first CSS framework
+- **Redux Toolkit** - State management solution
+- **React Router DOM** - Client-side routing
 
-| Layer        | Technologies                          |
-|--------------|---------------------------------------|
-| Frontend     | React, HTML, CSS, JavaScript          |
-| Backend      | Node.js, Express                      |
-| Database     | MongoDB                               |
-| Tools        | Git, REST APIs                        |
+### UI Components & Libraries
+- **@material-tailwind/react** - Material Design components with Tailwind
+- **@headlessui/react** - Unstyled, accessible UI components
+- **@heroicons/react** - Beautiful hand-crafted SVG icons
+- **Flowbite React** - UI component library built on Tailwind CSS
+- **Styled Components** - CSS-in-JS styling solution
 
----
-FOLDER STRUCTURE:
-Edufy_final/
-│
-├── frontend/           # React application
-│   ├── public/
-│   ├── src/
-│   └── package.json
-│
-├── backend/            # Express backend (API)
-│   ├── routes/
-│   ├── models/
-│   ├── controllers/
-│   └── package.json
-│
-└── README.md
-## ⚙️ Getting Started
+### Development Tools
+- **PostCSS** - CSS processing
+- **Prettier** - Code formatting
+- **ESLint** - Code linting and quality
+
+## 📁 Project Structure
+
+```
+Edufy_project-SIP/
+├── frontend/                 # React application
+│   ├── dist/                # Build output
+│   ├── src/                 # Source code
+│   ├── public/              # Static assets
+│   ├── package.json         # Dependencies and scripts
+│   ├── vite.config.js       # Vite configuration
+│   ├── tailwind.config.cjs  # Tailwind CSS configuration
+│   ├── firebase.json        # Firebase hosting configuration
+│   └── .firebaserc          # Firebase project configuration
+├── ngrok.yml                # Ngrok configuration for tunneling
+└── README.md                # This file
+```
+
+## 🚀 Getting Started
 
 ### Prerequisites
-- [Node.js](https://nodejs.org/) (v14 or above)  
-- npm (comes with Node.js)  
-- MongoDB (local or [MongoDB Atlas](https://www.mongodb.com/cloud/atlas))
+
+- **Node.js** (version 16 or higher)
+- **npm** or **yarn** package manager
+- **Firebase CLI** (for deployment)
 
 ### Installation
 
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd Edufy_project-SIP/frontend
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. **Start development server**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+4. **Open your browser**
+   Navigate to `http://localhost:5173` (or the port shown in your terminal)
+
+### Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build locally
+
+## 🎨 Customization
+
+### Tailwind CSS
+The project uses Tailwind CSS for styling. You can customize the design system by modifying:
+- `tailwind.config.cjs` - Tailwind configuration
+- `src/index.css` - Global styles and Tailwind directives
+
+### Material-UI Theme
+Customize the Material-UI theme in your main component or theme provider to match your brand colors and design preferences.
+
+## 🚀 Deployment
+
+### Firebase Hosting
+
+1. **Install Firebase CLI** (if not already installed)
+   ```bash
+   npm install -g firebase-tools
+   ```
+
+2. **Login to Firebase**
+   ```bash
+   firebase login
+   ```
+
+3. **Build the project**
+   ```bash
+   npm run build
+   ```
+
+4. **Deploy to Firebase**
+   ```bash
+   firebase deploy
+   ```
+
+The project is already configured for Firebase hosting with the project ID `edufy-50353`.
+
+### Environment Variables
+
+Create a `.env` file in the frontend directory for any environment-specific configurations:
+
+```env
+VITE_API_URL=your_api_url_here
+VITE_FIREBASE_CONFIG=your_firebase_config
+```
+
+## 📱 Responsive Design
+
+The application is built with a mobile-first approach and includes responsive breakpoints for:
+- Mobile devices (320px+)
+- Tablets (768px+)
+- Desktop (1024px+)
+- Large screens (1280px+)
+
+## 🔧 Development
+
+### Code Formatting
+The project uses Prettier for consistent code formatting. Run:
 ```bash
-# Clone the repository
-git clone https://github.com/K1TnA/Edufy_final.git
-cd Edufy_final
+npx prettier --write .
+```
 
-# Install backend dependencies
-npm install
+### Linting
+Ensure code quality by running the linter:
+```bash
+npx eslint src/
+```
 
+## 🤝 Contributing
 
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-# Go to frontend and install dependencies
-cd frontend
-npm install
+## 📄 License
 
-# Start the development servers
-npm run dev
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🆘 Support
+
+If you encounter any issues or have questions:
+- Check the existing issues in the repository
+- Create a new issue with detailed information
+- Contact the development team
+
+## 🔮 Future Enhancements
+
+- [ ] User authentication and authorization
+- [ ] Real-time notifications
+- [ ] Advanced analytics dashboard
+- [ ] Mobile app development
+- [ ] API integration for educational content
+- [ ] Multi-language support
+
+---
+
+**Built with ❤️ using React, Material-UI, and Tailwind CSS**
